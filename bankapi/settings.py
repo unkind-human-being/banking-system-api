@@ -84,9 +84,9 @@ WSGI_APPLICATION = 'bankapi.wsgi.application'
 # Use Render’s DATABASE_URL, fallback to local Postgres
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL', 'postgres://postgres:abdul@localhost:5432/bankdb'),
+        default='postgresql://bankdb_msls_user:nBEpir8z1Otgq3SGqbdddnHDkZrK04Te@dpg-d3suobruibrs73ajlkt0-a.oregon-postgres.render.com/bankdb_msls',
         conn_max_age=600,
-        ssl_require=False  # Render automatically enforces SSL
+        ssl_require=True  # Render automatically enforces SSL
     )
 }
 
